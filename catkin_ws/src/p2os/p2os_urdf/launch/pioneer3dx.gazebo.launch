@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find p2os_urdf)/launch/smart_workspace.launch">
+  </include>
+  
+  <!-- first robot -->
+  <group ns="/pioneer3dx_01">
+	  <include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"> 
+      <arg name="robot_name" value="/pioneer3dx_01"/>
+    </include>
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="10.0"/>
+      <param name="tf_prefix" type="string" value=""/>
+   	</node>  
+    <!-- push robot_description to factory and spawn robot in gazebo -->
+    <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model" args="-x 5.05 -y -4.8 -z 0.1 -Y -1.5708 -urdf -param robot_description -model pioneer3dx_01 -robot_namespace pioneer3dx_01" respawn="false" output="screen">
+    </node>
+  </group>
+    
+  <!-- second robot -->
+  <group ns="/pioneer3dx_02">
+    <include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"> 
+      <arg name="robot_name" value="/pioneer3dx_02"/>
+    </include>  
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="10.0"/>
+      <param name="tf_prefix" type="string" value=""/>
+   	</node>
+    <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model" args="-x 7.45 -y -4.8 -z 0.1 -Y -1.5708 -urdf -param robot_description -model pioneer3dx_02 -robot_namespace pioneer3dx_02" respawn="false" output="screen">
+    </node>
+  </group>
+  
+  <!-- third robot -->
+  <group ns="/pioneer3dx_03">
+    <include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"> 
+      <arg name="robot_name" value="/pioneer3dx_03"/>
+    </include>  
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="10.0"/>
+      <param name="tf_prefix" type="string" value=""/>
+   	</node>
+    <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model" args="-x 9.85 -y -4.8 -z 0.1 -Y -1.5708 -urdf -param robot_description -model pioneer3dx_03 -robot_namespace pioneer3dx_03" respawn="false" output="screen">
+    </node>
+  </group>
+  
+  <!-- fourth robot -->
+  <group ns="/pioneer3dx_04">
+    <include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"> 
+      <arg name="robot_name" value="/pioneer3dx_04"/>
+    </include>  
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="10.0"/>
+      <param name="tf_prefix" type="string" value=""/>
+   	</node>
+    <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model" args="-x -5.9 -y -19.05 -z 0.1 -Y -3.1416 -urdf -param robot_description -model pioneer3dx_04 -robot_namespace pioneer3dx_04" respawn="false" output="screen">
+    </node>
+  </group>
+  
+  <!-- fifth robot -->
+  <group ns="/pioneer3dx_05">
+    <include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"> 
+      <arg name="robot_name" value="/pioneer3dx_05"/>
+    </include>  
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="10.0"/>
+      <param name="tf_prefix" type="string" value=""/>
+   	</node>
+    <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model" args="-x -2.6 -y -19.05 -z 0.1 -Y 0 -urdf -param robot_description -model pioneer3dx_05 -robot_namespace pioneer3dx_05" respawn="false" output="screen">
+    </node>
+  </group>
+
+  <!-- sixth robot -->
+  <group ns="/pioneer3dx_06">
+    <include file="$(find p2os_urdf)/launch/upload_pioneer3dx.xml"> 
+      <arg name="robot_name" value="/pioneer3dx_06"/>
+    </include>  
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="10.0"/>
+      <param name="tf_prefix" type="string" value=""/>
+   	</node>
+    <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model" args="-x 8.95 -y -18 -z 0.1 -Y 0 -urdf -param robot_description -model pioneer3dx_06 -robot_namespace pioneer3dx_06" respawn="false" output="screen">
+    </node>
+  </group>
+
+  <!-- path coordinator -->
+  <node name = "path_coordinator" pkg="smart_workspace" type="path_coordinate_server" output="screen"/>
+  
+  <!-- turn on the first robot -->
+  <node name = "turn_on_agent_01" pkg="smart_workspace" type="turn_on_agent" output="screen" args="pioneer3dx_01 22"/>
+  <!-- turn on the second robot -->
+  <node name = "turn_on_agent_02" pkg="smart_workspace" type="turn_on_agent" output="screen" args="pioneer3dx_02 18"/>
+  <!-- turn on the third robot -->
+  <node name = "turn_on_agent_03" pkg="smart_workspace" type="turn_on_agent" output="screen" args="pioneer3dx_03 32"/>
+  <!-- turn on the fourth robot -->
+  <node name = "turn_on_agent_04" pkg="smart_workspace" type="turn_on_agent" output="screen" args="pioneer3dx_04 217"/>
+  <!-- turn on the fifth robot -->
+  <node name = "turn_on_agent_05" pkg="smart_workspace" type="turn_on_agent" output="screen" args="pioneer3dx_05 223"/>
+  <!-- turn on the sixth robot -->
+  <node name = "turn_on_agent_06" pkg="smart_workspace" type="turn_on_agent" output="screen" args="pioneer3dx_06 242"/>
+</launch>
+
+
+
+
+

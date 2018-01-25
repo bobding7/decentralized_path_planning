@@ -1,0 +1,2 @@
+collision_checker:control_node:husky_robot:mstar:nre_simmultihusky:p2os/p2os_doc:p2os/p2os_driver:p2os/p2os_launch:p2os/p2os_msgs:p2os/p2os_teleop:p2os/p2os_urdf:path_db
+-DCATKIN_DEVEL_PREFIX=/home/puneet/foxconnmultiagent/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/puneet/foxconnmultiagent/catkin_ws/install -G Unix Makefiles

@@ -1,0 +1,8 @@
+prefix=/home/puneet/foxconnmultiagent/catkin_ws/install
+
+Name: p2os_teleop
+Description: Description of p2os_teleop
+Version: 2.0.3
+Cflags: 
+Libs: -L/home/puneet/foxconnmultiagent/catkin_ws/install/lib -llib
+Requires: geometry_msgs sensor_msgs tf std_msgs

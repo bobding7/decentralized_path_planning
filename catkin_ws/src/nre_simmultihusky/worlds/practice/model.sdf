@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="practice">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+      <must_be_base_link>1</must_be_base_link>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.005</size>  <!-- adjust this to whatever you want -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://practice/meshes/practice.dae</uri>
+          </mesh>
+          <!-- <box>
+            <size>1 1 0.005</size>  <!-- same size as collision --
+          </box> -->
+        </geometry>
+<!--         <material>
+          <script>
+            <uri>model://practice/materials/scripts/practice.material</uri>
+            <name>practice/Image</name>
+          </script>
+        </material> -->
+        <cast_shadows>false</cast_shadows>  
+      </visual>
+    </link>
+  </model>
+</sdf>

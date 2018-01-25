@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<!-- 
+A launch file for commanding the multiple agents
+-->
+
+<launch>
+	<!-- We are using agent1, agent2 and so on as namespaces -->
+	<!-- This "agent_identity"parameter is used to use as argument in coordinator.py file -->
+	<!--<env name="ROS_HOSTNAME" value="192.168.10.200" />-->
+	<!--<env name="ROS_MASTER_URI" value="http://192.168.10.200:11311" />-->
+	
+	<group ns="agent1">
+		<node name="coordinator" pkg="control_node" type="coordinator.py" output="screen">
+			<param name="agent_identity" type="int" value="1" /> 
+		</node>
+		<node name="Planner" pkg="mstar" type="planning.py" output="screen">
+			<param name="agent_identity" type="int" value="1" />
+		</node>
+		<node name="QueryDB" pkg="path_db" type="query_db_server.py" output="screen">
+			<param name="agent_identity" type="int" value="1" />
+		</node>
+		<node name="Checker" pkg="collision_checker" type="checking.py" output="screen">
+			<param name="agent_identity" type="int" value="1" />
+		</node>
+	</group>
+
+	<group ns="agent2">
+		<node name="coordinator" pkg="control_node" type="coordinator.py" output="screen">
+			<param name="agent_identity" type="int" value="2" />
+		</node>
+		<node name="Planner" pkg="mstar" type="planning.py" output="screen">
+			<param name="agent_identity" type="int" value="2" />
+		</node>
+		<node name="QueryDB" pkg="path_db" type="query_db_server.py" output="screen">
+			<param name="agent_identity" type="int" value="2" />
+		</node>
+		<node name="Checker" pkg="collision_checker" type="checking.py" output="screen">
+			<param name="agent_identity" type="int" value="2" />
+		</node>
+	</group>
+
+	<group ns="agent3">
+		<node name="coordinator" pkg="control_node" type="coordinator.py" output="screen">
+			<param name="agent_identity" type="int" value="3" />
+		</node>
+		<node name="Planner" pkg="mstar" type="planning.py" output="screen">
+			<param name="agent_identity" type="int" value="3" />
+		</node>
+		<node name="QueryDB" pkg="path_db" type="query_db_server.py" output="screen">
+			<param name="agent_identity" type="int" value="3" />
+		</node>
+		<node name="Checker" pkg="collision_checker" type="checking.py" output="screen">
+			<param name="agent_identity" type="int" value="3" />
+		</node>
+	</group>
+
+<!-- 	<group ns="agent4">
+		<node name="coordinator" pkg="control_node" type="coordinator.py" output="screen">
+			<param name="agent_identity" type="int" value="4" />
+		</node>
+		<node name="Planner" pkg="mstar" type="planning.py" output="screen">
+			<param name="agent_identity" type="int" value="4" />
+		</node>
+		<node name="QueryDB" pkg="path_db" type="query_db_server.py" output="screen">
+			<param name="agent_identity" type="int" value="4" />
+		</node>
+		<node name="Checker" pkg="collision_checker" type="checking.py" output="screen">
+			<param name="agent_identity" type="int" value="4" />
+		</node>
+	</group>
+
+	<group ns="agent5">
+		<node name="coordinator" pkg="control_node" type="coordinator.py" output="screen">
+			<param name="agent_identity" type="int" value="5" />
+		</node>
+		<node name="Planner" pkg="mstar" type="planning.py" output="screen">
+			<param name="agent_identity" type="int" value="5" />
+		</node>
+		<node name="QueryDB" pkg="path_db" type="query_db_server.py" output="screen">
+			<param name="agent_identity" type="int" value="5" />
+		</node>
+		<node name="Checker" pkg="collision_checker" type="checking.py" output="screen">
+			<param name="agent_identity" type="int" value="5" />
+		</node>
+	</group> -->
+
+	<node pkg="rostopic" type="rostopic" name="agentsNames" args="pub /agentsNames std_msgs/String '1, 2, 3'"/>
+
+
+</launch>

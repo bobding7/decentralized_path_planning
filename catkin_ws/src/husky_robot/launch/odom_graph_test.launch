@@ -1,0 +1,8 @@
+<launch>
+	
+	
+	<node pkg="husky_robot" type="mstar_driver.py" name="mstar_driver" />
+	<node pkg="husky_robot" type="odom_graph.py" name="odom_graph" />
+
+
+</launch>

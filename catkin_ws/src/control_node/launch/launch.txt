@@ -1,0 +1,15 @@
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box1 -x 4.8 -y -1.2 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box2 -x 6.0 -y -1.2 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box3 -x 6.0 -y -2.4 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box4 -x 4.8 -y -2.4 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box5 -x 4.8 -y -3.6 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box6 -x 4.8 -y -4.8 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box7 -x 4.8 -y -6.0 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box8 -x 6.0 -y -6.0 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box9 -x 6.0 -y -4.8 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box12 -x 4.8 -y -10.8 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box13 -x 7.2 -y -4.8 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box14 -x 8.4 -y -4.8 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box15 -x 9.6 -y -4.8 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box16 -x 10.8 -y -4.8 -z 0.0 &
+rosrun gazebo_ros spawn_model -urdf -file object.urdf -model box17 -x 12.0 -y -4.8 -z 0.0

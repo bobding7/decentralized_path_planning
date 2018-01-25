@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+
+<!-- 
+A launch file for commanding the multiple agents
+-->
+
+<launch>
+	<!-- We are using agent1, agent2 and so on as namespaces -->
+	<!-- This "agent_identity"parameter is used to use as argument in multi_agent_test.py file -->
+	<!--<env name="ROS_HOSTNAME" value="192.168.10.200" />-->
+	<!--<env name="ROS_MASTER_URI" value="http://192.168.10.200:11311" />-->
+	
+	<group ns="agent1">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="1" /> 
+			<!--<remap from="agent1/cmd_vel" to="/cmd_vel" />-->
+		</node>
+	</group>
+
+	<group ns="agent2">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="2" /> 
+		</node>
+	</group>
+
+<!-- 	<group ns="agent3">
+		<node 		name="pathfollower" 		pkg="husky_robot" 		type="multi_agent_test.py" 		output="screen">
+			<param 	name="agent_identity" 								type="int" value="3" />
+		</node>
+	</group>
+
+	<group ns="agent4">
+		<node 		name="pathfollower" 		pkg="husky_robot" 		type="multi_agent_test.py" 		output="screen">
+			<param 	name="agent_identity" 								type="int" value="4" />
+		</node>
+	</group>
+
+
+	<group ns="agent5">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="5" />
+		</node>
+	</group>
+
+
+	<group ns="agent6">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="6" />
+		</node>
+	</group>
+
+	<group ns="agent7">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="7" />
+		</node>
+	</group>
+ -->
+	<group ns="agent8">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="8" />
+		</node>
+	</group>
+
+<!-- 	<group ns="agent9">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="9" />
+		</node>
+	</group>
+
+	<group ns="agent10">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="10" />
+		</node>
+	</group>
+
+		<group ns="agent11">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="11" />
+		</node>
+	</group>
+
+	<group ns="agent12">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="12" />
+		</node>
+	</group>
+ -->
+	<!-- <group ns="agent13">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="13" />
+		</node>
+	</group>
+
+	<group ns="agent14">
+		<node name="pathfollower" pkg="husky_robot" type="multi_agent_test.py" output="screen">
+			<param name="agent_identity" type="int" value="14" />
+		</node>
+	</group> -->
+
+</launch>

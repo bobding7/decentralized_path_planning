@@ -1,0 +1,6 @@
+int8 id
+Pose2D start
+Pose2D goal
+---
+string state
+

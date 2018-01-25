@@ -1,0 +1,6 @@
+set(collision_checker_SETUP_PY_VERSION "0.0.0")
+set(collision_checker_SETUP_PY_SCRIPTS "")
+set(collision_checker_SETUP_PY_PACKAGES "collision_checker")
+set(collision_checker_SETUP_PY_PACKAGE_DIRS "src/collision_checker")
+set(collision_checker_SETUP_PY_MODULES "")
+set(collision_checker_SETUP_PY_MODULE_DIRS "")

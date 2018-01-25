@@ -1,0 +1,8 @@
+prefix=/home/puneet/foxconnmultiagent/catkin_ws/install
+
+Name: control_node
+Description: Description of control_node
+Version: 0.0.0
+Cflags: -I/home/puneet/foxconnmultiagent/catkin_ws/install/include
+Libs: -L/home/puneet/foxconnmultiagent/catkin_ws/install/lib 
+Requires: rospy std_msgs message_runtime

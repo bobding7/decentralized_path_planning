@@ -1,0 +1,2 @@
+set(mstar_MESSAGE_FILES "/home/puneet/foxconnmultiagent/catkin_ws/src/mstar/msg/Pose2D.msg;/home/puneet/foxconnmultiagent/catkin_ws/src/mstar/msg/Pose2DList.msg;/home/puneet/foxconnmultiagent/catkin_ws/src/mstar/msg/Path2D.msg;/home/puneet/foxconnmultiagent/catkin_ws/src/mstar/msg/Belief.msg")
+set(mstar_SERVICE_FILES "/home/puneet/foxconnmultiagent/catkin_ws/src/mstar/srv/Planner.srv;/home/puneet/foxconnmultiagent/catkin_ws/src/mstar/srv/PriorityPlan.srv")
